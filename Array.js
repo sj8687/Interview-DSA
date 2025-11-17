@@ -213,15 +213,16 @@
 
 // let arr = [1,2,3,4,5];
 
-// let copy = arr[0]; //1
+// let copy = arr[0];  //1
 
 // for(i=0; i<arr.length-1; i++){   //5
-//         arr[i] = arr[i+1];  //2 = 2
+//     arr[i] = arr[i+1];  //2 = 2
 // }
 
 // arr[arr.length-1] = copy;    //
 
 // console.log(arr);    //[ 2, 3, 4, 5, 1 ]
+
 
 
 
@@ -238,7 +239,6 @@
 // arr[0] = copy;
 
 // console.log(arr);  //[ 5, 1, 2, 3, 4 ]
-
 
 
 
@@ -263,11 +263,12 @@
 
 // let arr = [1,2,3,4,5];
 // let temp = new Array(arr.length);
-// let k = Number(prompt("enter a value")); //7
-// k = k % arr.length;
+// // let k = Number(prompt("enter a value")); //7
+// k = 7 % arr.length;
 
 // for (let i = 0; i < arr.length; i++){
-//         temp[i] = arr[(i - k) % arr.length];
+//         temp[i] = arr[(i + k) % arr.length];
+//         console.log(temp[i]);        
 // }
 
 // console.log(temp);
@@ -276,17 +277,17 @@
 
 // This question is for rotating an array to the right by k steps
 // let arr = [1,2,3,4,5];
-// let k = Number(prompt("enter a value"))    //3
-// k = k % arr.length
+// // let k = Number(prompt("enter a value"))    //3
+// k = 3 % arr.length
 
-// reverse(0, k-1);   //[3, 2, 1, 4, 5]   (0,3-1) = 0 to 2
+// reverse(0, k-1);   //[3, 2, 1, 4, 5]   (0,3-1) = 0 to 2  //callin reverse fun..
 // reverse(k, arr.length-1);  //[3, 2, 1, 5, 4]   (3,4)
 // reverse(0, arr.length-1)   // [4, 5, 1, 2, 3]   (0,4)
 
 // console.log(arr);
 
 
-// function reverse(i,j){   //i=0, j=4 
+// function reverse(i,j){   //i=0, j=4 (this is the value of last revrse(k,lenght))
 
 //         while(i<j){
 //                 let temp = arr[i]   
@@ -309,6 +310,8 @@
 //         }
 //     }
 //     return j;
+
+    
 // };
 
 // let arr = [1, 6, 5, 5, 4, 4, 3, 3, 2, 1, 2];
@@ -317,6 +320,7 @@
 
 // console.log("Unique count:", count);
 // console.log("Updated array with unique elements:", arr.slice(0, count));
+
 
 // or
 // const unique = function(num){
@@ -369,7 +373,7 @@
 //     }
 // }
 
-// while (j < arr2.length) {
+// while (j < arr2.length) {      
 //     merge[k++] = arr2[j++];
 // }
 // while (i < arr1.length) {
@@ -395,8 +399,6 @@
 // }
 
 // console.log(maxProfit([1,4,33,55,6,7]));
-
-
 
 
 // sort a color
