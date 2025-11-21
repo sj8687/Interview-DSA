@@ -68,7 +68,6 @@ router.get("/", async (req, res) => {
       {
         $match: { name: "shree" }
       },
-
       {
         $group: {
           _id: "$age",
