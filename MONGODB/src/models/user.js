@@ -7,4 +7,7 @@ const userSchema = new mongoose.Schema({
   marks: {type: Number}
 });
 
+// compound index (multiple fields)
+// userSchema.index({ age: 1, marks: -1 });
+
 export const User = mongoose.model("User", userSchema);

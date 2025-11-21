@@ -38,7 +38,7 @@ router.get("/", async (req, res) => {
 
 
       // {
-      //   $lookup: {
+      //   $lookup: {           //join the two collections but throught the references like same id or name present in another one
       //     from: "cities",     //collection name in monogo compass
       //     localField: "name",    //from users
       //     foreignField: "name",    //from city
@@ -48,16 +48,16 @@ router.get("/", async (req, res) => {
       // {$unwind:"$cityInfo"}   //urn array → single object
 
 
-      {
-        $bucket:{      //$bucket Auto Creates Groups Based on Boundaries
-          groupBy:"$age",            //group by age
-          boundaries:[0,10,20,30],       //Tum bas boundaries do, MongoDB automatically group bana dega.
-          default: "greater than 40",
-          output:{
-            count:{$sum:1}          //return the output
-          }
-        }
-      }
+      // {
+      //   $bucket:{      //$bucket Auto Creates Groups Based on Boundaries
+      //     groupBy:"$age",            //group by age
+      //     boundaries:[0,10,20,30],       //Tum bas boundaries do, MongoDB automatically group bana dega.
+      //     default: "greater than 40",
+      //     output:{
+      //       count:{$sum:1}          //return the output
+      //     }
+      //   }
+      // }
 
 
       //  {
@@ -75,6 +75,7 @@ router.get("/", async (req, res) => {
       //   }
       // },
 
+      
 
       // {
       //   $match: { name: "shree" }
