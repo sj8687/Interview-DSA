@@ -57,10 +57,18 @@ router.get("/", async (req, res) => {
 
 
 
+      // {
+      //   $group: {
+      //     _id:"$name",  //  // group by class
+      //     totalage:{$sum : "$age"}  //sum of age (repeated names age)
+      //   }
+      // }
+
+
       {
         $group: {
-          _id:"$name",  //  // group by class
-          totalage:{$sum : "$age"}  //sum of age (repeated names age)
+          _id:"$age",
+
         }
       }
 
