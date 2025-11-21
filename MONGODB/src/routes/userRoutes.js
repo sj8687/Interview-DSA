@@ -26,7 +26,7 @@ router.post("/city", async (req, res) => {
 router.get("/", async (req, res) => {
   try {
 
-    // const users  = await User.find().lean();
+    // const users  = await User.find().lean();  //return plan obj no metadata of mongo
 
     const users = await User.aggregate([
 
@@ -48,6 +48,17 @@ router.get("/", async (req, res) => {
       // {$unwind:"$cityInfo"}   //urn array → single object
 
 
+      {
+        $bucket:{      //$bucket Auto Creates Groups Based on Boundaries
+          groupBy:"$age",            //group by age
+          boundaries:[0,10,20,30],       //Tum bas boundaries do, MongoDB automatically group bana dega.
+          default: "greater than 40",
+          output:{
+            count:{$sum:1}          //return the output
+          }
+        }
+      }
+
 
       //  {
       //     $match: {
@@ -65,15 +76,18 @@ router.get("/", async (req, res) => {
       // },
 
 
-      {
-        $match: { name: "shree" }
-      },
-      {
-        $group: {
-          _id: "$age",
-          sum: { $sum: 1 }
-        }
-      }
+      // {
+      //   $match: { name: "shree" }
+      // },
+      // {
+      //   $group: {
+      //     _id: "$age",
+      //     sum: { $sum: 1 }
+      //   }
+      // }
+
+
+      
 
 
     ]);
