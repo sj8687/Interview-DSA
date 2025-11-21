@@ -58,23 +58,29 @@ router.get("/", async (req, res) => {
 
 
       // {
-      //   $group: {
+      //   $group: {    //only return what we typed 
       //     _id:"$name",  //  // group by class
-      //     totalage:{$sum : "$age"}  //sum of age (repeated names age)
+      //     totalage:{$sum : "$age"}  //sum of age (gives us repeated names age)
       //   }
-      // }
+      // },
 
 
       {
-        $group: {
-          _id:"$age",
+        $match: { name: "shree" }
+      },
 
+      {
+        $group: {
+          _id: "$age",
+          sum: { $sum: 1 }
         }
       }
+
 
     ]);
 
     res.json({ users });
+
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
