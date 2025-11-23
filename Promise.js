@@ -188,7 +188,7 @@
 // async function  add(){
 //     await wait(10000)
 //     console.log("ewwwwwwww");
-    
+
 // }
 
 // add()
@@ -224,22 +224,26 @@
 
 
 // bind 
-// async function fetchData(url,endpoint){
-//         const response = await fetch(`${url}${endpoint}`);
-//         const data = response.json();
-//         return data
-//     }
-//                                 //  we not use this then we pass null
-//     const getData = fetchData.bind(null,'http://localhost:8080')
-//     getData('/product')
+// async function fetchData(url, endpoint) {
+//    console.log(url, endpoint);
+//    const response = await fetch(`${url}${endpoint}`);
+//    const data = response.json(); 
+//    return data;
+// }
+
+// // Bind the base URL
+
+// const getData = fetchData.bind(null, 'https://jsonplaceholder.typicode.com')
+// getData('/posts').then(posts => console.log(posts));
 
 
 
+// Promise with async await
 
-// Promise with async await 
+// async function add() {
+//    await new Promise((res) => setTimeout(res, 2000));
+//    console.log("Done!");
+// }
+// add();
 
-async function add() {
-   await new Promise((res) => setTimeout(res, 2000));
-   console.log("Done!");
-}
-add();
+

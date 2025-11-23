@@ -26,16 +26,25 @@ router.post("/city", async (req, res) => {
 router.get("/", async (req, res) => {
   try {
 
-    const users = await User.find({    //and or nor in nin ...
-      // age: { $type: "number" }, //exists
-      $and: [
-        { age: { $gt: 18 } },
-        { age: { $gt: 50 } }
-      ]
-    });
+    // const users = await User.find({  //Match specific element in array of objects
+    //   scores: {
+    //     $elemMatch: { name: "s", marks: { $lt: 30 } }
+    //   }
+    // });
+
+
+    // const users = await User.find({    //and or nor in nin ...
+    //  // // age: { $type: "number" }, //exists
+    //   $and: [
+    //     { age: { $gt: 18 } },
+    //     { age: { $gt: 50 } }
+    //   ]
+    // });
 
 
     // const users  = await User.find().lean();  //return plan obj no metadata of mongo
+
+
 
     // const users = await User.aggregate([
 
@@ -54,7 +63,7 @@ router.get("/", async (req, res) => {
     //     as: "cityInfo"
     //   },
     // },
-    // {$unwind:"$cityInfo"}   //urn array → single object
+    // {$unwind:"$cityInfo"}   //reurn array → single object
 
 
     // {
@@ -101,6 +110,7 @@ router.get("/", async (req, res) => {
 
 
     // ]);
+
 
     res.json({ users });
 

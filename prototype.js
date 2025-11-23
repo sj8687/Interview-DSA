@@ -5,21 +5,6 @@
 // - __proto__ har object ke andar hota hai, jo constructor ke prototype ko point karta hai.
 
 
-// function Animal(name) {
-//   this.name = name;
-// }
-
-// Animal.prototype.eat = function () {
-//   console.log(this.name + " is eating");
-// };
-
-
-// const cat = new Animal("Cat");
-// console.log(cat.__proto__ === Animal.prototype);
-
-// cat.eat(); 
-
-
 
 
 
@@ -27,16 +12,6 @@
 
 // const obj = { city: "New York" };
 // console.log(obj.toString());
-
-
-
-
-//  The __proto__ is an internal property of an object, pointing to the prototype of the constructor function that created the object. It is used in the lookup chain to resolve methods and properties.
-
-//  var stu1 = new Student("John", 25);
-//  console.log(stu1.__proto__ === Student.prototype); 
-// Output: true
-
 
 
 
@@ -73,7 +48,8 @@
 //     __proto__:obj,
 // } 
 
-// console.log(obj2.getName()); 
+// console.log(obj2.getName());   //ab
+
 
 
 

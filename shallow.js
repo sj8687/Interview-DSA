@@ -16,6 +16,7 @@ let employee = {
 let newEmployee = { ...employee };    
 
 newEmployee.eaddress.add = "Bmt";
+newEmployee.ename= "sj"
 
 console.log("Employee=> ", employee);        
 console.log("New Employee=> ", newEmployee);
