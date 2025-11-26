@@ -432,10 +432,11 @@
 
 
 
+
 // maximum subarray (kadane's algorithm)
 
 // const maxsub = function(nums){   
-//     let max = -Infinity; 
+//     let max = -Infinity;   //-infinity means small than negative val
 //     let sum = 0; 
 
 //     for(let i=0; i < nums.length; i++){
@@ -445,7 +446,7 @@
 //     }
 //     return max
 // }
-// console.log(maxsub([-2,1,-3,4,-1,2,1,-5,4]));  //6
+// console.log(maxsub([-2,1,-3,4,-1]));  //4
 
 
 
@@ -470,25 +471,6 @@
 // console.log(majority([2,2,1,1,1,2,2,2]));  //2
 
 
-
-
-// const major = function(nums) {
-//   let ans = nums[0];
-//   let count = 1;
-
-//   for(let i=1; i<nums.length; i++){
-//     if(count == 0){
-//       ans = nums[i];
-//       count = 1;
-//     }else if(ans == nums[i]){
-//       count++;
-//     }else count--;
-//   }
-
-//   return ans;
-// }
-
-
 // or
 
 // function major(nums) {
@@ -496,44 +478,44 @@
 //   return nums[Math.floor(nums.length / 2)];
 // }
 
-// console.log(major([2,2,1,2,2,1,3,3,3,3,3,3]));  //2
+// console.log(major([2,2,1,2,2,1,3,3,3,3,3,3]));  //3
 
 
 
 
 // trapping rain water (hard)
 
-// let trap = function(height){
+let trap = function(height){
 
-//   let left = new Array(height.length);   // [4,4,4,4,4,5]
-//   let right = new Array(height.length);  // [5,5,5,5,5,5]
+  let left = new Array(height.length);   // [4,4,4,4,4,5]
+  let right = new Array(height.length);  // [5,5,5,5,5,5]
 
-//   let maxLeft = height[0], maxRight = height[height.length-1];   // maxLeft-4  maxRight-5
+  let maxLeft = height[0], maxRight = height[height.length-1];   // maxLeft-4  maxRight-5
 
-//   left[0] = maxLeft , right[right.length-1] = maxRight;    //  Left-4  right-5
+  left[0] = maxLeft , right[right.length-1] = maxRight;    //  Left-4  right-5
  
 
-//   for(let i=1; i<height.length; i++){
-//     maxLeft = Math.max(height[i],maxLeft);
-//     left[i] = maxLeft;
-//   }
+  for(let i=1; i<height.length; i++){
+    maxLeft = Math.max(height[i],maxLeft);
+    left[i] = maxLeft;
+  }
 
-//   for(let i=height.length-2; i>=0; i--){
-//     maxRight = Math.max(height[i],maxRight);
-//     right[i] = maxRight;
-//   }
+  for(let i=height.length-2; i>=0; i--){
+    maxRight = Math.max(height[i],maxRight);
+    right[i] = maxRight;
+  }
 
-//   let ans = 0;
-//   for(let i=0; i<height.length; i++){
-//     ans += Math.min(left[i], right[i]) - height[i];
-//   }
+  let ans = 0;
+  for(let i=0; i<height.length; i++){
+    ans += Math.min(left[i], right[i]) - height[i];
+  }
 
-//   return ans;
+  return ans;
 
-// }
+}
 
 
-// console.log(trap([4,2,0,3,2,5]));   //9
+console.log(trap([4,2,0,3,2,5]));   //9
 
 
 
