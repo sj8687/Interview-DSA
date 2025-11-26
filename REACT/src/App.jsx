@@ -50,7 +50,6 @@ export default function App() {
     <div className="">
         <select onChange={(e) =>{
           setCountry(e.target.value);    
-          console.log(e.target.value);
              
         }}>
           {
