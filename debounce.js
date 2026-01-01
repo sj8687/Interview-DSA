@@ -21,3 +21,33 @@ function search(param){
 const dedo = debounce(search,1000)
 dedo("hii");
 dedo("lvde")
+
+
+
+
+
+
+// with apply method
+
+function debounce(fn, delay) {
+    let timer;
+    const ctx = this;
+    
+    return function (...args) {
+        console.log(args);
+
+        clearTimeout(timer);
+
+        timer = setTimeout(() => {
+            fn.apply(ctx,args);
+        }, delay)
+    }
+}
+
+const API = function () {
+    console.log("API call ho gaya", ...arguments);
+}
+
+const betterFunction = debounce(API, 3000)
+
+betterFunction("Dedeo")

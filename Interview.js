@@ -15,6 +15,7 @@
 
 // console.log(findMissingNumbers([1, 2, 3, 9])); // [4, 5, 6, 7, 8]
 
+ 
 
 
 // function isBalanced(s) {
@@ -41,7 +42,9 @@
 
 
 
+
 // convert a first letter in capital 
+
 // const convert = (str) =>{
 //     const strr = str.split(" ");
 
@@ -123,14 +126,14 @@
 
 // print a num array whose sum is 10
 
-// const arr = [8,1,5,4,6,11];
+// const arr = [1,9,4,6,4,6,11];
 // const ans = [];
 
 // for(let i = 0; i<arr.length-1; i++){
 //     for(let j = i+1; j<arr.length; j++){
-//         if(arr[i] + arr[j] == 10){
-//             ans.push(i);
-//             ans.push(j);
+//         if(arr[i] + arr[j] === 10){
+//             ans.push(arr[i]);
+//             ans.push(arr[j]);
 //         }
 //     }
 // }
@@ -190,7 +193,7 @@
 //     return totalcount  
 // }
 
-// console.log(countChar("hello siddhi","I"));
+// console.log(countChar("hello sj","I"));
 
 
 

@@ -1,4 +1,4 @@
-// create a seprate file of this 20 line code
+// create a seprate file of this 20 line code worker-optimized.js
 // Import 'parentPort' to send data back to main thread
 // Import 'workerData' to receive data from main thread
 const { parentPort, workerData } = require("worker_threads");

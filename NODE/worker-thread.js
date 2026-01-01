@@ -23,7 +23,7 @@
 
 
 // worker.js=============================== file name (make a seprate file of workrr threads)
-import { parentPort } from 'worker_threads';
+import { parentPort } from 'worker_threads';   //this send a msg to main thred like task is done 
 
 // Complex task
 let sum = 0;
@@ -31,7 +31,7 @@ for (let i = 0; i < 108; i++) {
   sum += i;
 }
 
-// Send result back to main thread
+// Send result back to main.js thread
 parentPort.postMessage(sum);
 
 
@@ -50,7 +50,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // Create a new worker using the worker.js file
-const workerVar = new Worker(path.resolve(__dirname, 'worker-thread.js'));
+const workerVar = new Worker(path.resolve(__dirname, 'worker.js'));
 
 workerVar.on('message', (result) => {
   console.log('Result from worker:', result);

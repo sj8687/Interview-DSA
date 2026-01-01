@@ -1,9 +1,12 @@
 //string is not immutable means we can't change the string like we chage array ex. str[0] = "s" but we change itt like this str + s  and fetch it like s[2]
 
 //print a to z with unicode
+
 // for (let i = 90; i <= 120; i++) {
 //   console.log(String.fromCharCode(i), i, '\\u' + i.toString(16).padStart(4, '0'));
 // }
+
+
 
 // fetch the str using loop
 
@@ -145,7 +148,7 @@
 
 // or
 
-// let str = "mkc";
+// let str = "nitin";
 // let palindrome = true;
 
 // let i = 0; j = str.length - 1;
@@ -241,7 +244,7 @@
 // for(let i=0; i< str.length; i++){
 //     let index = str.charCodeAt(i);
 //     arr[index] = arr[index] + 1     //arr[115] = arr[115] + 1 → arr[115] = 1
-// }
+// } 
 
 
 // for(let i=0; i<arr.length; i++){

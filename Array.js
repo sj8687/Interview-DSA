@@ -485,37 +485,37 @@
 
 // trapping rain water (hard)
 
-let trap = function(height){
+// let trap = function(height){
 
-  let left = new Array(height.length);   // [4,4,4,4,4,5]
-  let right = new Array(height.length);  // [5,5,5,5,5,5]
+//   let left = new Array(height.length);   // [4,4,4,4,4,5]
+//   let right = new Array(height.length);  // [5,5,5,5,5,5]
 
-  let maxLeft = height[0], maxRight = height[height.length-1];   // maxLeft-4  maxRight-5
+//   let maxLeft = height[0], maxRight = height[height.length-1];   // maxLeft-4  maxRight-5
 
-  left[0] = maxLeft , right[right.length-1] = maxRight;    //  Left-4  right-5
+//   left[0] = maxLeft , right[right.length-1] = maxRight;    //  Left-4  right-5
  
 
-  for(let i=1; i<height.length; i++){
-    maxLeft = Math.max(height[i],maxLeft);
-    left[i] = maxLeft;
-  }
+//   for(let i=1; i<height.length; i++){
+//     maxLeft = Math.max(height[i],maxLeft);
+//     left[i] = maxLeft;
+//   }
 
-  for(let i=height.length-2; i>=0; i--){
-    maxRight = Math.max(height[i],maxRight);
-    right[i] = maxRight;
-  }
+//   for(let i=height.length-2; i>=0; i--){
+//     maxRight = Math.max(height[i],maxRight);
+//     right[i] = maxRight;
+//   }
 
-  let ans = 0;
-  for(let i=0; i<height.length; i++){
-    ans += Math.min(left[i], right[i]) - height[i];
-  }
+//   let ans = 0;
+//   for(let i=0; i<height.length; i++){
+//     ans += Math.min(left[i], right[i]) - height[i];
+//   }
 
-  return ans;
+//   return ans;
 
-}
+// }
 
 
-console.log(trap([4,2,0,3,2,5]));   //9
+// console.log(trap([4,2,0,3,2,5]));   //9
 
 
 

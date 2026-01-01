@@ -34,3 +34,29 @@ const server = http.createServer((req, res) => {
 });
 
 server.listen(3000, () => console.log('Server running at http://localhost:3000'));
+
+
+
+
+
+
+
+// console.log("Start");
+
+// process.nextTick(() => {
+//   console.log("Next tick callback");
+// });
+
+// queueMicrotask(() => {
+//   console.log("Microtask callback");
+// });
+
+// setImmediate(() => {  // Corrected the typo here
+//   console.log("Immediate callback");
+// });
+
+// Promise.resolve().then(() => {
+//   console.log("Promise resolved");
+// });
+
+// console.log("End");

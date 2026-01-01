@@ -6,18 +6,18 @@
 
 // call:Pass arguments individually
 
-// function greet(age) {
-//   console.log(`Hello, I am ${this.name} and I am ${age}`);
-// }
+function greet(age) {
+  console.log(`Hello, I am ${this.name} and I am ${age}`);
+}
 
-// const person = { name: "Alice" };
+const person = { name: "Alice" };
 
-// greet.call(person, 25);
-
-
+greet.call(person, 25);
 
 
-// apply:pass argument in array
+
+
+// apply:pass argument in array like getting more arguments
 
 // function greet(age, city) {
 //   console.log(`I am ${this.name}, age ${age}, from ${city}`);
@@ -32,12 +32,12 @@
 
 // bind:Does NOT call the function immediately , Creates and returns a new function with this permanently set
 
-function greet() {
-  console.log(`Hello, I am ${this.name}`);
-}
+// function greet() {
+//   console.log(`Hello, I am ${this.name}`);
+// }
 
-const person = { name: "Charlie" };
+// const person = { name: "Charlie" };
 
-const newFunc = greet.bind(person);
-newFunc();   // Now it runs
+// const newFunc = greet.bind(person);
+// newFunc();   // Now it runs
 
